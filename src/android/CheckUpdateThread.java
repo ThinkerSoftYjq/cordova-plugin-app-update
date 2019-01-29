@@ -45,17 +45,22 @@ public class CheckUpdateThread implements Runnable {
 
     @Override
     public void run() {
-        int versionCodeLocal = getVersionCodeLocal(mContext); // 获取当前软件版本
-        int versionCodeRemote = getVersionCodeRemote();  //获取服务器当前软件版本
+        //int versionCodeLocal = getVersionCodeLocal(mContext); // 获取当前软件版本
+        //int versionCodeRemote = getVersionCodeRemote();  //获取服务器当前软件版本
 
-        queue.clear(); //ensure the queue is empty
-        queue.add(new Version(versionCodeLocal, versionCodeRemote));
+        //queue.clear(); //ensure the queue is empty
+        //queue.add(new Version(versionCodeLocal, versionCodeRemote));
 
-        if (versionCodeLocal == 0 || versionCodeRemote == 0) {
-            mHandler.sendEmptyMessage(Constants.VERSION_RESOLVE_FAIL);
-        } else {
+        //if (versionCodeLocal == 0 || versionCodeRemote == 0) {
+            //mHandler.sendEmptyMessage(Constants.VERSION_RESOLVE_FAIL);
+        //} else {
+            HashMap<String, String> hashMap = new HashMap<String, String>();
+            hashMap.put("url", updateXmlUrl);
+            setMHashMap(hashMap);
+
             mHandler.sendEmptyMessage(Constants.VERSION_COMPARE_START);
-        }
+
+        //}
     }
 
     /**
