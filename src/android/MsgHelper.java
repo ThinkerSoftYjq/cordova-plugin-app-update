@@ -1,4 +1,4 @@
-package com.vaenow.appupdate.android;
+package com.vaenow.appupdate;
 
 import android.content.res.Resources;
 

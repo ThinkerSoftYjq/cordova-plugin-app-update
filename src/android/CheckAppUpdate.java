@@ -1,4 +1,4 @@
-package com.vaenow.appupdate.android;
+package com.vaenow.appupdate;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;

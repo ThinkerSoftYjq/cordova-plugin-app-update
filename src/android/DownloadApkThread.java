@@ -1,4 +1,4 @@
-package com.vaenow.appupdate.android;
+package com.vaenow.appupdate;
 
 import android.app.AlertDialog;
 import android.content.Context;
