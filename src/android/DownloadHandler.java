@@ -83,7 +83,7 @@ public class DownloadHandler extends Handler {
      * 安装APK文件
      */
     private void installApk() {
-        File apkFile = new File(mSavePath, mHashMap.get("name"));
+        File apkFile = new File(mSavePath,"update_app");//mHashMap.get("name")
         if (!apkFile.exists()) {
             return;
         }
